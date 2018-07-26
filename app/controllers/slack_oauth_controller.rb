@@ -24,6 +24,8 @@ class SlackOauthController < ApplicationController
 
     user.update!(spotify_access_token: response["access_token"])
 
+    session[:current_user_id] = user.id
+
     redirect_to :root
   end
 
