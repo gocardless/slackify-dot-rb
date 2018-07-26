@@ -65,9 +65,10 @@ CREATE TABLE public.schema_migrations (
 
 CREATE TABLE public.users (
     id uuid DEFAULT public.gen_random_uuid() NOT NULL,
-    spotify_team_id character varying,
-    spotify_user_id character varying,
-    spotify_access_token character varying
+    slack_team_id character varying,
+    slack_user_id character varying,
+    slack_access_token character varying,
+    spotify_refresh_token character varying
 );
 
 

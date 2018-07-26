@@ -2,3 +2,7 @@ export SLACK_CLIENT_ID="fake-id"
 export SLACK_CLIENT_SECRET="fake-secret"
 export SLACK_REDIRECT_URI="http://example.com/"
 export SLACK_TEAM_ID="fake-team"
+
+export SPOTIFY_CLIENT_ID="fake-id"
+export SPOTIFY_CLIENT_SECRET="fake-secret"
+export SPOTIFY_REDIRECT_URI="http://example.com/"

@@ -18,11 +18,11 @@ class SlackOauthController < ApplicationController
     )
 
     user = User.find_or_create_by(
-      spotify_team_id: response["team_id"],
-      spotify_user_id: response["user_id"],
+      slack_team_id: response["team_id"],
+      slack_user_id: response["user_id"],
     )
 
-    user.update!(spotify_access_token: response["access_token"])
+    user.update!(slack_access_token: response["access_token"])
 
     session[:current_user_id] = user.id
 
