@@ -27,8 +27,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem "slack-ruby-client"
 gem "excon"
-# gem "rspotify"
-# gem "spotify-ruby"
 gem "prius"
 gem "dotenv", require: false
 gem "pg"
