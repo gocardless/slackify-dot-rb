@@ -27,23 +27,8 @@ class SpotifyOauthController < ApplicationController
       password: Prius.get(:spotify_client_secret),
     )
 
-    # render html: JSON.pretty_generate(JSON.parse(tokens.body))
-
     user.update!(spotify_refresh_token: JSON.parse(tokens.body)["refresh_token"])
 
     redirect_to :root
   end
-
-#   private
-
-#   def spotify_client
-#     if @client.nil?
-#       @client = Spotify::Accounts.new
-#       @client.client_id = Prius.get(:spotify_client_id)
-#       @client.client_secret = Prius.get(:spotify_client_secret)
-#       @client.redirect_uri = Prius.get(:spotify_redirect_uri)
-#     end
-
-#     @client
-#   end
 end
