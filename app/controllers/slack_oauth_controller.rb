@@ -17,7 +17,14 @@ class SlackOauthController < ApplicationController
       code: params[:code],
     )
 
-    render html: response.to_s
+    user = User.find_or_create_by(
+      spotify_team_id: response["team_id"],
+      spotify_user_id: response["user_id"],
+    )
+
+    user.update!(spotify_access_token: response["access_token"])
+
+    redirect_to :root
   end
 
   private
